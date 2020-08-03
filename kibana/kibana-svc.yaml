@@ -5,20 +5,21 @@
 # License (version 2) as published by the FSF - Free Software
 # Foundation.
 
-# Nginx service
+# Kibana service
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: wazuh-nginx
+  name: kibana
   labels:
-    app: wazuh-nginx
+    app: wazuh-kibana
 spec:
+# Directly exposing kibana
   type: NodePort
   selector:
-    app: wazuh-nginx
+    app: wazuh-kibana
   ports:
-    - name: web-https
-      port: 443
-      targetPort: 443
-      nodePort: 30443
+    - name: kibana
+      port: 5601
+      targetPort: 5601
+      nodePort: 30601
