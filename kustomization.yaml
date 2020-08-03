@@ -11,8 +11,6 @@ resources:
 - elastic/elasticsearch-sts.yaml
 - kibana/kibana-svc.yaml
 - kibana/kibana-deploy.yaml
-- kibana/nginx-svc.yaml
-- kibana/nginx-deploy.yaml
 - wazuh/wazuh-svc.yaml
 - wazuh/wazuh-conf.yaml
 - wazuh/wazuh-sts.yaml
