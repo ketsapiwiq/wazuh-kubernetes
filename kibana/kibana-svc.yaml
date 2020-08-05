@@ -15,8 +15,6 @@ metadata:
   labels:
     app: wazuh-kibana
 spec:
-# Directly exposing kibana
-  # type: LoadBalancer
   selector:
     app: wazuh-kibana
   ports:
@@ -26,6 +24,7 @@ spec:
       
 
 
+# Directly exposing kibana w/ ingress
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
